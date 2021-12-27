@@ -9,14 +9,19 @@ export const useAreaData = () => {
     setSelectedArea,
     isHovering,
     setIsHovering,
+    selectedAreaName,
+    setSelectedAreaName,
+    selectedAreaPin,
+    setSelectedAreaPin,
   } = useContext(AreaContext);
 
   function highlightFeature(e) {
     var layer = e.target;
 
-    setSelectedArea(layer.feature.properties.area_id);
-
     setIsHovering(true);
+    setSelectedArea(layer.feature.properties.area_id);
+    setSelectedAreaName(layer.feature.properties.name);
+    setSelectedAreaPin(layer.feature.properties.pin_code);
 
     layer.setStyle({
       weight: 3,
@@ -33,9 +38,10 @@ export const useAreaData = () => {
   function style(feature) {
     return {
       // fillColor: getColor(feature.properties.density),
+      // fillColor: "#F28F3B",
       weight: 2,
       opacity: 1,
-      // color: "",
+      // color: "white",
       dashArray: "3",
       fillOpacity: 0.1,
     };
@@ -48,6 +54,10 @@ export const useAreaData = () => {
     isHovering,
     setIsHovering,
     highlightFeature,
+    selectedAreaName,
+    setSelectedAreaName,
+    selectedAreaPin,
+    setSelectedAreaPin,
     style,
   };
 };

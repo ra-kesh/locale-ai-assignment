@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useAreaData } from "../../Hooks/useAreaData";
 import { useUserData } from "../../Hooks/useUserData";
+import "./details.css";
 
 export const Details = () => {
   const [proMemberPercentage, setProMemberPercentage] = useState();
   const [maleFemaleRatio, setMaleFemaleRatio] = useState();
 
-  const { selectedArea, isHovering } = useAreaData();
+  const { selectedArea, isHovering, selectedAreaName } = useAreaData();
   const { userData } = useUserData();
 
   const areaUserData = userData?.filter(
@@ -39,21 +40,23 @@ export const Details = () => {
   }, [areaMaleUser, areaFeMaleUser, setMaleFemaleRatio]);
 
   return (
-    <div>
+    <div className="details">
       <h1>Area Details</h1>
       {isHovering ? (
-        <>
-          <h4>Total Members In Area</h4>
+        <div style={{ marginTop: "1rem" }}>
+          <h4>Name of the Area</h4>
+          <h2>{selectedAreaName}</h2>
+          <h4>Total Users In Area</h4>
           <h2>{areaUserData.length}</h2>
-          <h4>Pro Members In Area</h4>
+          <h4>Pro Users In Area</h4>
           <h2>
             {areaProMembers.length}({proMemberPercentage}%)
           </h2>
-          <h4>Male Female Ratio in Area</h4>
+          <h4>Male to Female Ratio in Area</h4>
           <h2>{maleFemaleRatio} </h2>
-          <h4>Popular Members in Area</h4>
+          <h4>Popular Users in Area</h4>
           <h2>{areaPopularMembers.length}</h2>
-        </>
+        </div>
       ) : (
         <h4>hover on map to see details</h4>
       )}

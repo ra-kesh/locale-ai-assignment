@@ -35,6 +35,11 @@ export const MapTile = () => {
     onEachFeature: onEachFeature,
   }).addTo(map);
 
+  // L.geoJSON(geoJsonAreaData, {
+  //   style: style,
+  //   onEachFeature: onEachFeature,
+  // }).addTo(map);
+
   return (
     <TileLayer
       url="https://api.mapbox.com/styles/v1/rakeshh/ckxoyqs1xarxr15p3mc14qvan/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmFrZXNoaCIsImEiOiJja3hrYXNiZDUwc2w2MnFvNWtnczkyYmRjIn0.HT4Iqud4gfAZl0lEn34m_w"
