@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.header-wrapper {
+  display: flex;
+}
+/* .header-wrapper label {
+  display: inline-block;
+  color: var(--color-main);
+  margin-right: 2rem;
+  font-size: 1.8rem;
+}
+.header-wrapper label span:hover {
+  cursor: pointer;
+} */
+.header-title h1 {
+  color: var(--main-text);
+  font-weight: 600;
+}
+.header-title p {
+  color: #666;
+  font-size: 0.9rem;
+}
+.header-title p span {
+  color: red;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
