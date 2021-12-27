@@ -1,0 +1,45 @@
+.sidebar {
+  width: 345px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem 1.2rem;
+  transition: left 300ms;
+}
+.sidebar-container {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+  overflow-y: auto;
+}
+
+.brand {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand h3 {
+  color: #444;
+  font-size: 3rem;
+}
+.brand h3 span {
+  color: var(--color-main);
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.sidebar-menu {
+  margin-top: 5rem;
+}
+
+.sidebar-menu li {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
