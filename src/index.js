@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AreaProvider } from "./Context/area-context";
 import { UserProvider } from "./Context/user-context";
+import "leaflet/dist/leaflet.css";
 
 ReactDOM.render(
   <React.StrictMode>

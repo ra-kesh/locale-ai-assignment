@@ -4,3 +4,9 @@
   padding: 1rem 2rem 1.2rem 1.2rem;
   transition: margin-left 300ms;
 }
+
+.block-grid {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 70% auto;
+}
