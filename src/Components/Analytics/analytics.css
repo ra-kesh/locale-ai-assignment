@@ -1,0 +1,42 @@
+.analytics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+.analytic {
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  padding-left: 2rem;
+}
+.analytic-info h4 {
+  font-weight: 400;
+  color: #555;
+  font-size: 0.98rem;
+}
+.analytic-info h1 {
+  color: var(--main-text);
+  font-weight: 600;
+}
+.analytic-info h1 small {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.analytic:first-child .analytic-icon {
+  background-color: #dce5ff;
+  color: #6883db;
+}
+.analytic:nth-child(2) .analytic-icon {
+  background-color: #ebf7f5;
+  color: red;
+}
+.analytic:nth-child(3) .analytic-icon {
+  background-color: #ebf7f5;
+  color: #2ec3a3;
+}
+.analytic:nth-child(4) .analytic-icon {
+  background-color: var(--main-accent);
+  color: var(--color-main);
+}

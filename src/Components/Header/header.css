@@ -1,20 +1,12 @@
 header {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 .header-wrapper {
   display: flex;
 }
-/* .header-wrapper label {
-  display: inline-block;
-  color: var(--color-main);
-  margin-right: 2rem;
-  font-size: 1.8rem;
-}
-.header-wrapper label span:hover {
-  cursor: pointer;
-} */
+
 .header-title h1 {
   color: var(--main-text);
   font-weight: 600;

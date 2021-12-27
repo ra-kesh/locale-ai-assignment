@@ -1,11 +1,15 @@
 import "./App.css";
-import { SideBar } from "./Components";
+import { Header, SideBar, Analytics } from "./Components";
 
 function App() {
   return (
-    <div>
+    <>
       <SideBar />
-    </div>
+      <div className="main-content">
+        <Header />
+        <Analytics />
+      </div>
+    </>
   );
 }
 

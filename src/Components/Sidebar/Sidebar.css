@@ -1,5 +1,5 @@
 .sidebar {
-  width: 345px;
+  width: 300px;
   height: 100%;
   position: fixed;
   top: 0;
@@ -19,13 +19,11 @@
 }
 
 .brand {
-  padding-top: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .brand h3 {
-  color: #444;
   font-size: 3rem;
 }
 .brand h3 span {
