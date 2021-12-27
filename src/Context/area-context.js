@@ -6,6 +6,8 @@ export const AreaContext = createContext();
 
 export const AreaProvider = ({ children }) => {
   const [geoJsonAreaData, setGeoJsonAreaData] = useState([]);
+  const [selectedArea, setSelectedArea] = useState("");
+  const [isHovering, setIsHovering] = useState(false);
 
   const fetchGeoJsonAreaData = async () => {
     try {
@@ -22,7 +24,15 @@ export const AreaProvider = ({ children }) => {
   }, []);
 
   return (
-    <AreaContext.Provider value={{ geoJsonAreaData }}>
+    <AreaContext.Provider
+      value={{
+        geoJsonAreaData,
+        selectedArea,
+        setSelectedArea,
+        isHovering,
+        setIsHovering,
+      }}
+    >
       {children}
     </AreaContext.Provider>
   );

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Header, SideBar, Analytics, Map } from "./Components";
+import { Header, SideBar, Analytics, Map, Details } from "./Components";
 
 function App() {
   return (
@@ -9,7 +9,10 @@ function App() {
         <Header />
         <Analytics />
         <div className="block-grid">
-          <Map />
+          <div className="map-container">
+            <Map />
+          </div>
+          <Details />
         </div>
       </div>
     </>
