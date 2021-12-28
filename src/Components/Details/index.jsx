@@ -8,6 +8,7 @@ export const Details = () => {
   const [maleFemaleRatio, setMaleFemaleRatio] = useState();
 
   const { isHovering, selectedAreaName } = useAreaData();
+
   const {
     areaUserData,
     areaProMembers,

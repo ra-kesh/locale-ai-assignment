@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 
-export const SideBar = () => {
+export const SideBar = ({ setShow }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-container">
@@ -11,17 +11,20 @@ export const SideBar = () => {
 
         <div className="sidebar-menu">
           <ul>
-            <li>
+            <li onClick={() => setShow("overview")}>
               <span>Overview</span>
             </li>
-            <li>
+            <li onClick={() => setShow("allUsers")}>
+              <span>Total Users</span>
+            </li>
+            <li onClick={() => setShow("proUsers")}>
               <span>Pro Users</span>
             </li>
-            <li>
-              <span>Male female Ratio</span>
+            <li onClick={() => setShow("popularUsers")}>
+              <span>Popular Users</span>
             </li>
-            <li>
-              <span>Number of Users</span>
+            <li onClick={() => setShow("maleToFemaleRatio")}>
+              <span>Male to female Ratio</span>
             </li>
           </ul>
         </div>

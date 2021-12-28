@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AreaContext } from "../Context/area-context";
 import L from "leaflet";
+// import { useUserData } from "./useUserData";
 
 export const useAreaData = () => {
   const {
@@ -16,17 +17,6 @@ export const useAreaData = () => {
   } = useContext(AreaContext);
 
   var geojson;
-
-  function style(feature) {
-    return {
-      weight: 2,
-      opacity: 1,
-      // color: "white",
-      dashArray: "3",
-      fillOpacity: 0.4,
-      // fillColor: getColor(feature.properties.density)
-    };
-  }
 
   const feature = geoJsonAreaData?.features?.map((feature) => {
     return feature;
@@ -85,6 +75,5 @@ export const useAreaData = () => {
     setSelectedAreaPin,
     onEachFeature,
     feature,
-    style,
   };
 };
