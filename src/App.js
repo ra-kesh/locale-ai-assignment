@@ -6,7 +6,7 @@ function App() {
   const [show, setShow] = useState("overview");
   return (
     <>
-      <SideBar setShow={setShow} />
+      <SideBar setShow={setShow} show={show} />
       <div className="main-content">
         <Header />
         <Analytics />

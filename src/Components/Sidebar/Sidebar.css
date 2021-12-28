@@ -22,15 +22,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 0 0.5rem;
 }
 .brand h3 {
   font-size: 3rem;
-}
-.brand h3 span {
-  color: var(--color-main);
-  font-size: 2.5rem;
-  display: inline-block;
-  margin-right: 0.5rem;
 }
 
 .sidebar-menu {
@@ -38,6 +33,12 @@
 }
 
 .sidebar-menu li {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   cursor: pointer;
+  padding: 0.7rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.active {
+  background-color: #e5e7eb;
 }
