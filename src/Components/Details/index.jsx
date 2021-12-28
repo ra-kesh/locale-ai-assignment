@@ -7,26 +7,18 @@ export const Details = () => {
   const [proMemberPercentage, setProMemberPercentage] = useState();
   const [maleFemaleRatio, setMaleFemaleRatio] = useState();
 
-  const { selectedArea, isHovering, selectedAreaName } = useAreaData();
-  const { userData } = useUserData();
-
-  const areaUserData = userData?.filter(
-    ({ area_id }) => area_id === selectedArea
-  );
-
-  const areaProMembers = areaUserData?.filter(
-    ({ is_pro_user }) => is_pro_user === true
-  );
-
-  const areaPopularMembers = areaUserData?.filter(
-    ({ total_matches }) => total_matches >= 5
-  );
-
-  const areaMaleUser = areaUserData?.filter(({ gender }) => gender === "M");
-  const areaFeMaleUser = areaUserData?.filter(({ gender }) => gender === "F");
+  const { isHovering, selectedAreaName } = useAreaData();
+  const {
+    areaUserData,
+    areaProMembers,
+    areaPopularMembers,
+    areaMaleUser,
+    areaFeMaleUser,
+  } = useUserData();
 
   useEffect(() => {
     if (areaUserData.length <= 0 && areaProMembers.length <= 0) return;
+
     setProMemberPercentage(
       ((areaProMembers.length / areaUserData.length) * 100).toFixed()
     );
@@ -34,6 +26,7 @@ export const Details = () => {
 
   useEffect(() => {
     if (areaMaleUser.length <= 0 && areaFeMaleUser.length <= 0) return;
+
     setMaleFemaleRatio(
       (areaMaleUser.length / areaFeMaleUser.length).toFixed(2)
     );
